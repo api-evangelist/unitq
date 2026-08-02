@@ -1,8 +1,25 @@
 aid: unitq
-name: UnitQ
-description: 'UnitQ is a company surfaced as a portfolio company of accel, creandum and added to the API
-  Evangelist network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment
-  pipeline.'
+name: unitQ
+description: 'unitQ is an AI-powered customer feedback and product quality platform
+  founded in 2018 and backed by Accel and Creandum. It unifies feedback from support
+  tickets, app-store reviews, social channels, and surveys into a real-time quality
+  signal (the unitQ Score) across products including monitorQ, supportQ, metricQ,
+  socialQ, competeQ, interviewQ, and agentQ. unitQ publicly names a User Feedback
+  Upload API for ingesting feedback data and a Data Enrichment API for attaching
+  user attributes, platform details, and KPIs such as CSAT and NPS to feedback;
+  the API reference lives in its login-gated help center.'
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://www.unitq.com/favicon/android-icon-192x192.png
 url: https://raw.githubusercontent.com/api-evangelist/unitq/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,12 +29,48 @@ x-backed-by:
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-- Ai
-apis: []
+- AI
+- Customer Feedback
+- Product Quality
+- Feedback Analytics
+- Support Experience
+- Voice of Customer
+apis:
+- name: unitQ User Feedback Upload API
+  description: Ingest feedback data into unitQ to centralize feedback from systems
+    without a native integration. Publicly named on the unitQ integrations page;
+    the API reference is in the login-gated help center (help.unitq.com answers
+    401/403 anonymously).
+  humanURL: https://www.unitq.com/integrations/
+  baseURL: https://api.unitq.com
+  x-note: api.unitq.com probed live 2026-07-21 (TLS up, all paths answer 401
+    auth-required; root answers 500) — the only public unitQ API host found.
+  tags:
+  - Feedback
+  - Ingestion
+  properties: []
+- name: unitQ Data Enrichment API
+  description: Enrich feedback from any source with metadata such as user
+    attributes, platform details, and KPIs like CSAT and NPS. Publicly named on
+    the unitQ integrations page; the API reference is in the login-gated help
+    center.
+  humanURL: https://www.unitq.com/integrations/
+  baseURL: https://api.unitq.com
+  x-note: api.unitq.com probed live 2026-07-21 (TLS up, all paths answer 401
+    auth-required) — the only public unitQ API host found.
+  tags:
+  - Feedback
+  - Enrichment
+  properties: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -26,3 +79,25 @@ maintainers:
 common:
 - type: Website
   url: https://www.unitq.com/
+- type: Blog
+  url: https://www.unitq.com/blog/
+- type: Support
+  url: https://help.unitq.com/hc/en-us
+- type: Login
+  url: https://monitor.unitq.com/
+- type: StatusPage
+  url: https://status.unitq.com
+- type: TermsOfService
+  url: https://www.unitq.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.unitq.com/privacy-policy/
+- type: Compliance
+  url: https://www.unitq.com/security/
+- type: TrustCenter
+  url: security/unitq-trust-center.yml
+- type: DomainSecurity
+  url: security/unitq-domain-security.yml
+- type: Lifecycle
+  url: lifecycle/unitq-lifecycle.yml
+- type: LLMsTxt
+  url: llms/unitq-llms.txt

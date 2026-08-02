@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: live HTTP probes of unitQ hosts
+note: No /.well-known/ discovery documents are published. api.unitq.com answers 401
+  (auth-gated) for all paths; app.unitq.com is an SPA catch-all that returns its
+  index page (HTTP 200, text/html) for every path, so its responses are not real
+  well-known documents. No pointer is wired in apis.yml because no document exists.
+hosts:
+- host: https://www.unitq.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://api.unitq.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 401
+  - path: /.well-known/openid-configuration
+    status: 401
+  - path: /.well-known/oauth-authorization-server
+    status: 401
+  - path: /.well-known/api-catalog
+    status: 401
+  - path: /.well-known/ai-plugin.json
+    status: 401
+  - path: /llms.txt
+    status: 500
+- host: https://monitor.unitq.com
+  redirects_to: https://app.unitq.com
+  documents:
+  - path: /llms.txt
+    status: 200
+    note: SPA catch-all serves index.html (text/html) for any path, including
+      /zzz-not-a-real-path-xyz; not a real llms.txt

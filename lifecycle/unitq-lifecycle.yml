@@ -1,0 +1,13 @@
+generated: '2026-07-21'
+method: searched
+source: https://status.unitq.com
+status_page: https://status.unitq.com
+status_page_provider: Atlassian Statuspage
+versioning: null
+deprecation: null
+sla: null
+notes: unitQ publishes a public status page (Atlassian Statuspage, linked from the
+  www.unitq.com footer). No public versioning policy, deprecation policy, Sunset
+  header support, or SLA page was found; API documentation lives in the
+  login-gated help center (help.unitq.com answers 401/403 anonymously).
+deprecated_operations: []
