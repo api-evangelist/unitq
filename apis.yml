@@ -8,6 +8,17 @@ description: 'unitQ is an AI-powered customer feedback and product quality platf
   Upload API for ingesting feedback data and a Data Enrichment API for attaching
   user attributes, platform details, and KPIs such as CSAT and NPS to feedback;
   the API reference lives in its login-gated help center.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
