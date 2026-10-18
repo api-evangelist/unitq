@@ -88,6 +88,9 @@ apis:
     auth-required) — the only public unitQ API host found.
   tags:
   - Feedback
+  - Data Enrichment
+  tags_raw:
+  - Feedback
   - Enrichment
   properties: []
 maintainers:
