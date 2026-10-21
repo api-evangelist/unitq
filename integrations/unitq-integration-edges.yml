@@ -4,6 +4,7 @@ checked:
 - datadog/integrations/datadog-integration-edges.yml
 - slack/integrations/slack-integration-edges.yml
 - zendesk/integrations/zendesk-integration-edges.yml
+- surveymonkey/integrations/surveymonkey-integration-edges.yml
 source:
 - datadog/integrations/datadog-integration-edges.yml
 edges:
@@ -58,3 +59,19 @@ edges:
   detected: '2026-10-19'
   detected_by: mirror-platform-listings.py
   category: Reporting and Analytics
+- partner_name: SurveyMonkey (own)
+  partner: surveymonkey
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.surveymonkey.com/apps/bNP0DmqWhVML8_2Fty3YIL3A_3D_3D/details/
+  mirror_of: surveymonkey/integrations/surveymonkey-integration-edges.yml
+  apps:
+  - unitQ
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py

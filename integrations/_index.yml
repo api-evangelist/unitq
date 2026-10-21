@@ -42,3 +42,15 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: unitq-surveymonkey-own
+  label: SurveyMonkey (own)
+  partner: surveymonkey
+  partner_name: SurveyMonkey (own)
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.surveymonkey.com/apps/bNP0DmqWhVML8_2Fty3YIL3A_3D_3D/details/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
